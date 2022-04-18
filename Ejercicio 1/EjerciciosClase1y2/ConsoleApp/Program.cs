@@ -7,7 +7,7 @@ namespace program
     static void Main(string[] args)
     {
         Console.WriteLine("Seleccione el ejercicio que desea probar.");
-        Console.WriteLine("Ejercicios disponibles: 1, 2, 6, 7, 8, 9, 10, 11");
+        Console.WriteLine("Ejercicios disponibles: 1, 2, 3, 6, 7, 8, 9, 10, 11");
         String opcion = Console.ReadLine();
             switch (opcion)
             {
@@ -18,7 +18,7 @@ namespace program
                     ejercicio2();
                     break;
                 case "3":
-                    NoImplementado();
+                    ejercicio3();
                     break;
                 case "4":
                     NoImplementado();
@@ -57,6 +57,7 @@ namespace program
                     NoImplementado();
                     break;
                 default:
+                    Console.WriteLine("Solo puede ingresar numeros de ejercicios disponibles");
                     break;
             }
             Console.ReadKey();
@@ -102,14 +103,10 @@ namespace program
                 try
                 {
                     int num = int.Parse(val);
-                    if (num % 2 == 0)
-                    {
+                    if (EsPar(num))
                         Console.WriteLine("El valor es par");
-                    }
                     else
-                    {
                         Console.WriteLine("El numero es impar");
-                    }
                 }
                 catch
                 {
@@ -117,11 +114,27 @@ namespace program
                 }
             }
             else
-            {
                 Console.WriteLine("No se ha ingresado ningun valor");
-            }
         }
 
+        private static void ejercicio3()
+        {
+            Console.WriteLine("Ingrese un numero entero.");
+            int num;
+            int.TryParse(Console.ReadLine(), out num);
+            if (EsImpar(num / 2))
+                Console.WriteLine("El numero ingresado es el doble de un impar. Cumple con la condicion.");
+            else
+                Console.WriteLine("No cumple con la condicion de ser el doble de un impar.");
+        }
+        private static bool EsPar(int num)
+        {
+            return num % 2 == 0;
+        }
+        private static bool EsImpar(int num)
+        {
+            return num % 2 == 1;
+        }
         private static void ejercicio8()
         {
             Console.WriteLine("Ingrese un valor");

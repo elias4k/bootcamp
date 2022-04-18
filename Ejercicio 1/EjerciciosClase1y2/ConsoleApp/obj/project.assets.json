@@ -162,19 +162,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\elias\\.nuget\\packages\\": {}
+    "C:\\Users\\20402807653\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\elias\\Documents\\GitHub\\bootcamp\\Ejercicio 1\\EjerciciosClase1y2\\ConsoleApp\\ConsoleApp.csproj",
+      "projectUniqueName": "C:\\Users\\20402807653\\Documents\\GitHub\\bootcamp\\Ejercicio 1\\EjerciciosClase1y2\\ConsoleApp\\ConsoleApp.csproj",
       "projectName": "ConsoleApp",
-      "projectPath": "C:\\Users\\elias\\Documents\\GitHub\\bootcamp\\Ejercicio 1\\EjerciciosClase1y2\\ConsoleApp\\ConsoleApp.csproj",
-      "packagesPath": "C:\\Users\\elias\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\elias\\Documents\\GitHub\\bootcamp\\Ejercicio 1\\EjerciciosClase1y2\\ConsoleApp\\obj\\",
+      "projectPath": "C:\\Users\\20402807653\\Documents\\GitHub\\bootcamp\\Ejercicio 1\\EjerciciosClase1y2\\ConsoleApp\\ConsoleApp.csproj",
+      "packagesPath": "C:\\Users\\20402807653\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\20402807653\\Documents\\GitHub\\bootcamp\\Ejercicio 1\\EjerciciosClase1y2\\ConsoleApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\elias\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\20402807653\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -220,7 +220,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }
