@@ -59,6 +59,7 @@ namespace program
                 default:
                     break;
             }
+            Console.ReadKey();
     }
 
         public static void NoImplementado()
@@ -89,6 +90,7 @@ namespace program
         {
             Console.WriteLine("No se ha ingresado ningun valor");
         }
+        
     }
 
         public static void ejercicio2()
