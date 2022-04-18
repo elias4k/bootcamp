@@ -7,6 +7,7 @@ namespace program
     static void Main(string[] args)
     {
         Console.WriteLine("Seleccione el ejercicio que desea probar.");
+        Console.WriteLine("Ejercicios disponibles: 1, 2, 6, 7, 8, 9, 10, 11");
         String opcion = Console.ReadLine();
             switch (opcion)
             {
@@ -15,6 +16,18 @@ namespace program
                     break;
                 case "2":
                     ejercicio2();
+                    break;
+                case "3":
+                    ejercicio7();
+                    break;
+                case "4":
+                    ejercicio7();
+                    break;
+                case "5":
+                    ejercicio7();
+                    break;
+                case "6":
+                    ejercicio6();
                     break;
                 case "7":
                     ejercicio7();
@@ -26,6 +39,21 @@ namespace program
                     ejercicio9();
                     break;
                 case "10":
+                    ejercicio10();
+                    break;
+                case "11":
+                    ejercicio11();
+                    break;
+                case "12":
+                    ejercicio10();
+                    break;
+                case "13":
+                    ejercicio10();
+                    break;
+                case "14":
+                    ejercicio10();
+                    break;
+                case "15":
                     ejercicio10();
                     break;
                 default:
@@ -128,32 +156,42 @@ namespace program
             Console.WriteLine("El total es " + total);
             
         }
-        private static void tryejercicio7()
+
+        private static void ejercicio6()
         {
-            int[] billetes = new int[] { 1000, 500, 100, 50, 20, 10, 5, 2, 1 };
-            Console.WriteLine("Ingrese un valor");
-            String val = Console.ReadLine();
-            if (val != null)
-            {
-                try
-                {
-                    int num = int.Parse(val);
-                    for (int i = 0; i <= num; i++)
-                    {
-                        Console.WriteLine(i);
-                    }
-                }
-                catch
-                {
-                    Console.WriteLine("El valor ingresado debe ser un número.");
-                }
-            }
-            else
-            {
-                Console.WriteLine("No se ha ingresado ningun valor");
-            }
+            Console.WriteLine("\nPara este caso solo se aceptan numeros enteros.");
+            Console.WriteLine("\nIngrese la longitud del lado 1.");
+            int lado1 = int.Parse(Console.ReadLine());
+            Console.WriteLine("Ingrese la longitud del lado 2.");
+            int lado2 = int.Parse(Console.ReadLine());
+            Console.WriteLine("Ingrese la longitud del lado 3.");
+            int lado3 = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("El tipo del triangulo es " + TipoTriangulo(lado1, lado2, lado3));
+            Console.WriteLine("El perimetro del triangulo es " + PerimetroTriangulo(lado1, lado2, lado3));
+            Console.WriteLine("Area: " + AreaTriangulo(lado1, lado2));
+            Console.WriteLine("(Para el caso del area de considera el lado 1 como base y el lado 2 como altura)");
         }
 
+
+        private static double AreaTriangulo(int baseTriangulo, int alturaTriangulo)
+        {
+            return baseTriangulo * alturaTriangulo / 2;
+        }
+        private static double PerimetroTriangulo(int lado1, int lado2, int lado3)
+        {
+            return lado1 + lado2 + lado3;
+        }
+
+        private static String TipoTriangulo(int lado1, int lado2, int lado3)
+        {
+            if (lado1 == lado2 && lado2 == lado3)
+                return "equilatero";
+            if (lado1 == lado2 || lado1 == lado3 || lado2 == lado3)
+                return "isóseles";
+            return "escaleno";
+            
+        }
 
         private static void ejercicio7()
         {
@@ -246,6 +284,23 @@ namespace program
             }
             Console.WriteLine(respuesta);
         }
+        private static void ejercicio11()
+        {
+            Console.WriteLine("Por favor. Ingrese una contraseña.");
+            String pass1 = Console.ReadLine();
+            Console.WriteLine("Reingrese la contraseña para confirmar.");
+            String pass2 = Console.ReadLine();
+            while (pass1 != pass2)
+            {
+                Console.WriteLine("Las contraseñas no coinciden");
+                Console.WriteLine("Reingrese la contraseña para confirmar.");
+                pass2 = Console.ReadLine();
+
+            }     
+            Console.WriteLine("Su contraseña ha sido guardada correctamente.");
+        }
+
+
 
     }
 }
