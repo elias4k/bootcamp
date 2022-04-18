@@ -25,6 +25,9 @@ namespace program
                 case "9":
                     ejercicio9();
                     break;
+                case "10":
+                    ejercicio10();
+                    break;
                 default:
                     break;
             }
@@ -115,7 +118,7 @@ namespace program
         {
             int total = 0;
             int num = 0;
-            for (int i = 1;i <= 5;i++)
+            for (int i = 1;i <= 15;i++)
             {
                 Console.WriteLine("Ingrese el valor " + i);
                 String val = Console.ReadLine();
@@ -231,6 +234,18 @@ namespace program
                 Console.WriteLine("Monedas de $1: " + c1);
         }
 
+        private static void ejercicio10()
+        {
+            String respuesta = "";
+            for (int i = 1; i <= 5; i++)
+            {
+                Console.WriteLine("Ingresa el valor " + i);
+                int num = int.Parse(Console.ReadLine());
+                if (num % 3 == 0)
+                    respuesta = respuesta + num + " es multiplo de 3\n";
+            }
+            Console.WriteLine(respuesta);
+        }
 
     }
 }
