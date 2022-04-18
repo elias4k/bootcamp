@@ -286,16 +286,23 @@ namespace program
         }
         private static void ejercicio11()
         {
+            Console.Clear();
+            String pass1 = ""; 
+            String pass2 = "";
+
             Console.WriteLine("Por favor. Ingrese una contraseña.");
-            String pass1 = Console.ReadLine();
+            pass1 = Console.ReadLine();
             Console.WriteLine("Reingrese la contraseña para confirmar.");
-            String pass2 = Console.ReadLine();
-            while (pass1 != pass2)
+            pass2 = Console.ReadLine();
+
+            while (pass1 != pass2 || pass1.Length <= 0 || pass2.Length <= 0)
             {
-                Console.WriteLine("Las contraseñas no coinciden");
+                Console.Clear();
+                Console.WriteLine("Algo salió mal, las contraseñas deben coincidir y no ser nulas\n");
+                Console.WriteLine("Por favor. Ingrese una contraseña.");
+                pass1 = Console.ReadLine();
                 Console.WriteLine("Reingrese la contraseña para confirmar.");
                 pass2 = Console.ReadLine();
-
             }     
             Console.WriteLine("Su contraseña ha sido guardada correctamente.");
         }
