@@ -76,10 +76,10 @@ namespace program
             try
             {
                 int num = int.Parse(val);
-                if (num > 100)
-                {
-                    Console.WriteLine("El valor es mayor que 100");
-                }
+                    if (num > 100)
+                        Console.WriteLine("El valor es mayor que 100");
+                    else
+                        Console.WriteLine("El valor es menor que 100");
             }
             catch
             {
