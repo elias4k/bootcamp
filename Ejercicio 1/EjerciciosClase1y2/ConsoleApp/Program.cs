@@ -18,13 +18,13 @@ namespace program
                     ejercicio2();
                     break;
                 case "3":
-                    ejercicio7();
+                    NoImplementado();
                     break;
                 case "4":
-                    ejercicio7();
+                    NoImplementado();
                     break;
                 case "5":
-                    ejercicio7();
+                    NoImplementado();
                     break;
                 case "6":
                     ejercicio6();
@@ -45,23 +45,26 @@ namespace program
                     ejercicio11();
                     break;
                 case "12":
-                    ejercicio10();
+                    NoImplementado();
                     break;
                 case "13":
-                    ejercicio10();
+                    NoImplementado();
                     break;
                 case "14":
-                    ejercicio10();
+                    NoImplementado();
                     break;
                 case "15":
-                    ejercicio10();
+                    NoImplementado();
                     break;
                 default:
                     break;
             }
     }
 
-        
+        public static void NoImplementado()
+        {
+            Console.WriteLine("Esta funcion aún no está implementada.");
+        }
 
         public static void ejercicio1()
     {
