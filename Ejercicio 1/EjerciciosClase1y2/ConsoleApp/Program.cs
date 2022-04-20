@@ -45,7 +45,7 @@ namespace program
                     ejercicio11();
                     break;
                 case "12":
-                    NoImplementado();
+                    ejercicio12();
                     break;
                 case "13":
                     NoImplementado();
@@ -302,27 +302,40 @@ namespace program
             }
             Console.WriteLine(respuesta);
         }
-        private static void ejercicio11()
+        private static void ejercicio11(int limiteIntentos=1000)
         {
             Console.Clear();
             String pass1 = ""; 
             String pass2 = "";
 
+            int intentosRealizados = 0;
             Console.WriteLine("Por favor. Ingrese una contraseña.");
             pass1 = Console.ReadLine();
             Console.WriteLine("Reingrese la contraseña para confirmar.");
             pass2 = Console.ReadLine();
-
-            while (pass1 != pass2 || pass1.Length <= 0 || pass2.Length <= 0)
+            intentosRealizados++;
+            while ((pass1 != pass2 || pass1.Length <= 0 || pass2.Length <= 0))
             {
                 Console.Clear();
+                if (intentosRealizados >= limiteIntentos)
+                {
+                    Console.WriteLine("No se pueden realizar mas intentos");
+                    return;
+                }
                 Console.WriteLine("Algo salió mal, las contraseñas deben coincidir y no ser nulas\n");
                 Console.WriteLine("Por favor. Ingrese una contraseña.");
                 pass1 = Console.ReadLine();
                 Console.WriteLine("Reingrese la contraseña para confirmar.");
                 pass2 = Console.ReadLine();
+                intentosRealizados++;
+
             }     
             Console.WriteLine("Su contraseña ha sido guardada correctamente.");
+        }
+
+        private static void ejercicio12()
+        {
+            ejercicio11(3);
         }
 
 
