@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "994xiqh+HiDhqusV5xFDIcInCoLxEa+t2p4cdz8WomIx0lI2zYvB0dqqenn2kbmmh6EWSdMGN6mnbgAbs2+/rQ==",
+  "dgSpecHash": "/NY6KXBztTL7TbaIPMFjg7nQlr3LKkRk+MqAiNBGf/pP/7KGauPvrAauoyZOJqWd3H47MvOKKmSnZUlWqgoIfw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\20402807653\\Documents\\GitHub\\bootcamp\\Ejercicio 1\\EjerciciosClase1y2\\ConsoleApp\\ConsoleApp.csproj",
+  "projectFilePath": "C:\\Users\\20402807653\\Documents\\GitHub\\bootcamp\\EjerciciosClase1y2\\ConsoleApp\\ConsoleApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\20402807653\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.1\\microsoft.netcore.platforms.1.1.1.nupkg.sha512",
     "C:\\Users\\20402807653\\.nuget\\packages\\microsoft.netcore.targets\\1.1.3\\microsoft.netcore.targets.1.1.3.nupkg.sha512",

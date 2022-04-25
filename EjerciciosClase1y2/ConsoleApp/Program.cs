@@ -7,7 +7,7 @@ namespace program
     static void Main(string[] args)
     {
         Console.WriteLine("Seleccione el ejercicio que desea probar.");
-        Console.WriteLine("Ejercicios disponibles: 1, 2, 3, 6, 7, 8, 9, 10, 11");
+        Console.WriteLine("Ejercicios disponibles: 1, 2, 3, 6, 7, 8, 9, 10, 11, 12.");
         String opcion = Console.ReadLine();
             switch (opcion)
             {
