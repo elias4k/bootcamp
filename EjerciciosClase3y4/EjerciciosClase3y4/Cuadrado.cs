@@ -21,5 +21,10 @@ namespace EjerciciosClase3y4
         {
             return (float)(Base * Altura);
         }
+
+        public string AreaToString()
+        {
+            return "El Area del cuadrado de " + Base + " x " + Altura + " es " + Area();
+        }
     }
 }
