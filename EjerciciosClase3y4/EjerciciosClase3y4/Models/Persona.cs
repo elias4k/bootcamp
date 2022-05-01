@@ -11,6 +11,7 @@ namespace EjerciciosClase3y4.Models
         public string Nombre { get; set; }
         public string Apellido { get; set; }
         public DateOnly FechaNac { get; set; }
+        public Smartphone smartphone { get; set; }
 
         public Persona(string Nombre, string Apellido, string FechaNacimiento)
         {
