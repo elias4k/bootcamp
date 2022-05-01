@@ -69,7 +69,10 @@ namespace EjerciciosClase3y4.Models
         {
             Console.WriteLine(Velocidad);
         }
-
+        public void AgregarConductor(Persona conductor)
+        {
+            Conductor = conductor;
+        }
         public void AgregarPasajero(Persona pasajero)
         {
             Pasajeros.Add(pasajero);
