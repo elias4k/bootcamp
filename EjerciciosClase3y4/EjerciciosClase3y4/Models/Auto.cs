@@ -12,20 +12,21 @@ namespace EjerciciosClase3y4.Models
         public string Modelo { get; set; }
         public string Marca { get; set; }
         public string Color { get; set; }
-        public int Velocidad { get; set; }
+        public double Velocidad { get; set; }
         public Persona? Conductor { get; set; }
         public List<Persona> Pasajeros { get; set; }
         public int Capacidad { get; set; }
         public Mascota? Mascota { get; set; }
 
 
-        public Auto(string Marca, string Modelo, string Color)
+        public Auto(string Marca, string Modelo, string Color, int Capacidad)
         {
             this.Marca = Marca; 
             this.Modelo = Modelo;
             this.Color = Color;
             this.Encendido = false;
             this.Velocidad = 0;
+            this.Capacidad = Capacidad;
             return;
         }
 
@@ -55,15 +56,20 @@ namespace EjerciciosClase3y4.Models
         {
             if (Encendido)
             {
-                Velocidad = +10;
-                Console.WriteLine(Velocidad);
+                if (Velocidad == 0)
+                    Velocidad = +10;
+                else
+                {
+                    Velocidad *= 1.1;
+                    Console.WriteLine(Velocidad);
+                }
             }
             else
                 Console.WriteLine("Primero debe encender el auto.");
         }
         public void Frenar()
         {
-            this.Velocidad = -20;
+            this.Velocidad *= 0.8;
         }
         public void VelocidadActual()
         {
@@ -77,6 +83,26 @@ namespace EjerciciosClase3y4.Models
         {
             Pasajeros.Add(pasajero);
             Console.WriteLine(pasajero.NombreCompleto + " es el pasajero Nro " + Pasajeros.Count);
+        }
+
+        public void AgregarMascota(Mascota mascota, Persona pasajero)
+        {
+
+            if (this.Conductor != null && this.Conductor.Edad() >= 18)
+            {
+                if (pasajero.NombreCompleto() != Conductor.NombreCompleto())
+                {
+                    if (mascota.Tamano == "pequeño")
+                    {
+                        this.Mascota = mascota;
+                        mascota.SentarseEnRegazo(pasajero);
+                    }
+                    else
+                        Console.WriteLine("\nLa mascota es muy grande para llevarla en el regazo");
+                }
+                else
+                    Console.WriteLine("\nLa mascota no puede viajar en el regazo del conductor");
+            }
         }
 
 

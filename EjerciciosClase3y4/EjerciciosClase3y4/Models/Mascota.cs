@@ -11,6 +11,8 @@ namespace EjerciciosClase3y4.Models
         public string Nombre { get; set; }
         public string Tipo { get; set; }
         public int Energia { get; set; }
+        public string Tamano { get; set; }
+        private Persona? PersonaLap { get; set; }
 
         public Mascota(string Nombre, string Tipo)
         {
@@ -41,6 +43,14 @@ namespace EjerciciosClase3y4.Models
                 Console.WriteLine(Nombre + " está muy cansado.");
                 return;
             }
+        }
+
+        public void SentarseEnRegazo(Persona persona)
+        {
+            if (Tamano == "pequeño")
+                PersonaLap = persona;
+            else
+                Console.WriteLine("\nLa mascota es muy grande para llevarla en el regazo");
         }
     }
 }
