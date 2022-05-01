@@ -1,5 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
-using EjerciciosClase3y4;
+using EjerciciosClase3y4.Models;
+
 
 var cuadrado = new Cuadrado(2.5);
 Console.WriteLine(cuadrado.AreaToString());
