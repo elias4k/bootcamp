@@ -16,6 +16,7 @@ namespace EjerciciosClase3y4.Models
         public Persona? Conductor { get; set; }
         public List<Persona> Pasajeros { get; set; }
         public int Capacidad { get; set; }
+        public Mascota? Mascota { get; set; }
 
 
         public Auto(string Marca, string Modelo, string Color)
@@ -68,5 +69,14 @@ namespace EjerciciosClase3y4.Models
         {
             Console.WriteLine(Velocidad);
         }
+
+        public void AgregarPasajero(Persona pasajero)
+        {
+            Pasajeros.Add(pasajero);
+            Console.WriteLine(pasajero.NombreCompleto + " es el pasajero Nro " + Pasajeros.Count);
+        }
+
+
     }
+
 }
