@@ -13,6 +13,10 @@ namespace EjerciciosClase3y4.Models
         public string Marca { get; set; }
         public string Color { get; set; }
         public int Velocidad { get; set; }
+        public Persona? Conductor { get; set; }
+        public List<Persona> Pasajeros { get; set; }
+        public int Capacidad { get; set; }
+
 
         public Auto(string Marca, string Modelo, string Color)
         {
@@ -26,8 +30,18 @@ namespace EjerciciosClase3y4.Models
 
         public void Encender()
         {
-            this.Encendido = true;
-            Console.WriteLine("Auto encendido.");
+            if (Conductor != null)
+            {
+                if (Conductor.Edad() >= 18)
+                {
+                    this.Encendido = true;
+                    Console.WriteLine("Auto encendido.");
+                }
+                else
+                    Console.WriteLine("El conductor debe tener mas de 18 años");
+            }
+            else
+                Console.WriteLine("El auto no se puede encender sin conductor.");
         }
 
         public void Apagar()
