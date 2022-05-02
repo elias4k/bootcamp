@@ -61,8 +61,8 @@ namespace EjerciciosClase3y4.Models
                 else
                 {
                     Velocidad *= 1.1;
-                    Console.WriteLine(Velocidad);
                 }
+                VelocidadActual();
             }
             else
                 Console.WriteLine("Primero debe encender el auto.");
@@ -70,6 +70,7 @@ namespace EjerciciosClase3y4.Models
         public void Frenar()
         {
             this.Velocidad *= 0.8;
+            VelocidadActual();
         }
         public void VelocidadActual()
         {
@@ -77,7 +78,13 @@ namespace EjerciciosClase3y4.Models
         }
         public void AgregarConductor(Persona conductor)
         {
-            Conductor = conductor;
+            if (Conductor != null)
+            {
+                Conductor = conductor;
+                Console.WriteLine("El conductor del vehiculo ahora es " + Conductor.NombreCompleto());
+            }
+            else
+                Console.WriteLine("El vehiculo ya tiene como conductor a " + Conductor.NombreCompleto());
         }
         public void AgregarPasajero(Persona pasajero)
         {
@@ -96,12 +103,31 @@ namespace EjerciciosClase3y4.Models
                     {
                         this.Mascota = mascota;
                         mascota.SentarseEnRegazo(pasajero);
+                        this.AgregarPasajero(pasajero);
                     }
                     else
-                        Console.WriteLine("\nLa mascota es muy grande para llevarla en el regazo");
+                    {
+                        Console.WriteLine("La mascota es muy grande para llevarla en el regazo");
+                    }
                 }
                 else
-                    Console.WriteLine("\nLa mascota no puede viajar en el regazo del conductor");
+                    Console.WriteLine("La mascota no puede viajar en el regazo del conductor");
+            }
+            else
+            {
+                Console.WriteLine("Para subir con la mascota, debe estar presente un conductor mayor de 18 años.");
+            }
+        }
+        public void BajarATodos()
+        {
+            if (Velocidad == 0 && this.Encendido == false)
+            {
+                this.Pasajeros.Clear();
+                this.Conductor = null;
+            }
+            else
+            {
+                Console.WriteLine("El vehiculo debe estar detenido y apagado para que todos se bajen.");
             }
         }
 

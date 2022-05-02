@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EjerciciosClase3y4.Models
 {
-    internal class Smartphone
+    public class Smartphone
     {
         public string Moldelo { get; set; }
         public string Marca { get; set; }

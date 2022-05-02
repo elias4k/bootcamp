@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EjerciciosClase3y4.Models
 {
-    class Persona
+    public class Persona
     {
         public string Nombre { get; set; }
         public string Apellido { get; set; }

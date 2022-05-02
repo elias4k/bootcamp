@@ -14,11 +14,12 @@ namespace EjerciciosClase3y4.Models
         public string Tamano { get; set; }
         private Persona? PersonaLap { get; set; }
 
-        public Mascota(string Nombre, string Tipo)
+        public Mascota(string Nombre, string Tipo, string Tamano)
         {
             this.Nombre = Nombre;   
             this.Tipo = Tipo;
-            Energia = 0;
+            this.Tamano = Tamano;
+            Energia = 50;
         }
 
         public void Alimentar()
