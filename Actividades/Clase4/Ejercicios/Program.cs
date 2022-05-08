@@ -14,7 +14,10 @@ Console.WriteLine(Lista.ejercicio3());
 
 
 Console.WriteLine("\n\n*** Ejercicio 4 ***");
-// Lista.ejercicio4(); // Descomentar para ejecutar
+Console.WriteLine("(Presione Y para ejecutar ejercicio 4, de lo contrario presione cualquier otra tecla para continuar.)");
+var resp4 = Console.ReadKey();
+if (resp4.KeyChar == 'y' || resp4.KeyChar == 'Y')
+    Lista.ejercicio4();
 
 
 Console.WriteLine("\n\n*** Ejercicio 5 ***");
@@ -30,4 +33,9 @@ Lista.ejercicio7();
 
 
 Console.WriteLine("\n\n*** Ejercicio 8 ***");
-Lista.ejercicio8();
+Console.WriteLine("(Presione Y para ejecutar ejercicio 8, de lo contrario presione cualquier otra tecla para finalizar.)");
+var resp8 = Console.ReadKey();
+if (resp8.KeyChar == 'y' || resp8.KeyChar == 'Y')
+    Lista.ejercicio8();
+
+Console.WriteLine("\n\n\n");

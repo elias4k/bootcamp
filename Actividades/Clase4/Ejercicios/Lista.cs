@@ -238,10 +238,10 @@ namespace Ejercicios
                 posj = Convert.ToInt32(Console.ReadLine());
 
                 if (x[posi, posj] == 'X')
-                    Console.WriteLine("\nAcerto");
+                    Console.WriteLine("\nAcertó");
                 else
                 {
-                    Console.WriteLine("\nNo Acerto");
+                    Console.WriteLine("\nNo Acertó");
 
                     chance--;
                 }
