@@ -115,14 +115,6 @@ namespace Ejercicios
                 }
                 Console.WriteLine("");
             }
-            /**
-            foreach (int item in matriz)
-            {
-                
-                Console.WriteLine(Array.IndexOf(matriz, item));
-
-
-            }*/
         }
     }
 }
