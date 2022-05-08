@@ -191,5 +191,31 @@ namespace Ejercicios
             Console.WriteLine("\nTemperatura más alta del mes: {0}° se dió el día: {1} de la semana {2}", max, dmax, week);
 
         }
+
+        public static void ejercicio7()
+        {
+            int[,] t = new int[10, 10];
+
+            for (int i = 0; i < 10; i++)
+                t[i, 0] = i;
+            for (int j = 0; j < 10; j++)
+                t[0, j] = j;
+
+            for (int i = 1; i < 10; i++)
+            {
+                for (int j = 1; j < 10; j++)
+                {
+                    t[i, j] = i * j;
+                }
+            }
+            for (int i = 0; i < 10; i++)
+            {
+                for (int j = 0; j < 10; j++)
+                {
+                    Console.Write(t[j, i] + "   ");
+                }
+                Console.WriteLine();
+            }
+        }
     }
 }
