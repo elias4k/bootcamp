@@ -217,5 +217,47 @@ namespace Ejercicios
                 Console.WriteLine();
             }
         }
+        public static void ejercicio8()
+        {
+            char[,] x = new char[10, 10];
+
+            for (int i = 0; i < 45; i++)
+            {
+                int rposi = new Random().Next(0, 10);
+                int rposj = new Random().Next(0, 10);
+                x[rposi, rposj] = 'X';
+            }
+            int chance = 3;
+            while (chance != 0)
+            {
+
+                int posi, posj;
+                Console.WriteLine("\nIngrese fila: ");
+                posi = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("\nIngrese columna: ");
+                posj = Convert.ToInt32(Console.ReadLine());
+
+                if (x[posi, posj] == 'X')
+                    Console.WriteLine("\nAcerto");
+                else
+                {
+                    Console.WriteLine("\nNo Acerto");
+
+                    chance--;
+                }
+            }
+
+            for (int i = 0; i < 10; i++)
+            {
+                for (int j = 0; j < 10; j++)
+                {
+                    if (x[i, j] != 'X')
+                        Console.Write(" * ");
+                    else
+                        Console.Write(" X ");
+                }
+                Console.WriteLine();
+            }
+        }
     }
 }

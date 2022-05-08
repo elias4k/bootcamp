@@ -27,3 +27,7 @@ Lista.ejercicio6();
 
 Console.WriteLine("\n\n*** Ejercicio 7 ***");
 Lista.ejercicio7();
+
+
+Console.WriteLine("\n\n*** Ejercicio 8 ***");
+Lista.ejercicio8();
