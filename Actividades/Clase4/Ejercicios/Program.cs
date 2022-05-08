@@ -13,4 +13,7 @@ Console.WriteLine("\n\n*** Ejercicio 3 ***");
 Console.WriteLine(Lista.ejercicio3());
 
 Console.WriteLine("\n\n*** Ejercicio 4 ***");
-Lista.ejercicio4();
+// Lista.ejercicio4(); // Descomentar para ejecutar
+
+Console.WriteLine("\n\n*** Ejercicio 5 ***");
+Lista.ejercicio5(); 

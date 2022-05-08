@@ -91,5 +91,38 @@ namespace Ejercicios
 
         }
 
+        public static void ejercicio5()
+        {
+            int a = 5;
+            int b = 5;
+            char[,] matriz = new char[a, b];
+
+            Console.WriteLine("\nMatriz original:");
+            for (int i = 1; i <= a; i++)
+            {
+                for (int j = 1; j <= b; j++)
+                {
+                    Console.Write(j + " ");
+                }
+                Console.WriteLine("");
+            }
+            Console.WriteLine();
+            for (int i = 1; i <= a; i++)
+            {
+                for (int j = 1; j <= b; j++)
+                {                    
+                    Console.Write(j % 2 == 0 ? "P " : "I ");
+                }
+                Console.WriteLine("");
+            }
+            /**
+            foreach (int item in matriz)
+            {
+                
+                Console.WriteLine(Array.IndexOf(matriz, item));
+
+
+            }*/
+        }
     }
 }
