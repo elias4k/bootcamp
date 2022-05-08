@@ -37,14 +37,59 @@ namespace Ejercicios
             var nombres = new List<string>() { "Juan", "Pedro", "Alejando", "Alberto", "Ignacio" };
             string mayor = "";
             string menor = "ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss";
-            foreach(string nombre in nombres)
+            foreach (string nombre in nombres)
             {
                 if (nombre.Length > mayor.Length)
                     mayor = nombre;
                 if (nombre.Length < menor.Length)
                     menor = nombre;
             }
-            return "Nombre mas largo: " + mayor + " con "+ mayor.Length+" caracteres\nNombre mas corto: " + menor + " con " + menor.Length + " caracteres";
+            return "Nombre mas largo: " + mayor + " con " + mayor.Length + " caracteres.\nNombre mas corto: " + menor + " con " + menor.Length + " caracteres.";
         }
+
+        public static void ejercicio4()
+        {
+            List<String> lista = new List<string>();
+            lista.Add("papa");
+            lista.Add("carne");
+            bool fin = false;
+            List<String> itemy = new List<String>();
+            List<String> itemn = new List<String>();
+            while (!fin)
+            {
+                Console.WriteLine("\nIngrese producto, 'fin' para salir: ");
+                var item = Console.ReadLine();
+                if (item == "fin")
+                    fin = true;
+                else
+                {
+                    if (lista.Contains(item))
+                    {
+                        itemy.Add(item);
+                        Console.WriteLine("\nEl Producto esta en la lista");
+                    }
+                    else
+                    {
+                        itemn.Add(item);
+                        Console.WriteLine("\nEl Producto no esta en la lista");
+                    }
+
+                }
+            }
+            var u = itemy.Union(itemn);
+            var nc = lista.Except(u);
+
+            Console.WriteLine("\nProductos que no compro");
+            foreach (string s in nc)
+                Console.WriteLine(s);
+            Console.WriteLine("\nProductos que compro y no estaban en la lista");
+            foreach (string s in itemn)
+                Console.WriteLine(s);
+            Console.WriteLine("\nTodo lo que compro: ");
+            foreach (string s in u)
+                Console.WriteLine(s);
+
+        }
+
     }
 }
