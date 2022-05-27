@@ -5,3 +5,6 @@ WebAPI-Bootcamp/WebAPI/.vs/WebAPI/v17/.suo
 *.json
 WebAPI-Bootcamp/WebAPI/.vs/WebAPI/v17/.suo
 *.v2
+**/obj/**
+**/bin/**
+**/.vs/**
