@@ -7,4 +7,11 @@
         public string Type { get; set; }
         public string Breed { get; set; }
     }
+    
+    public class ViewModelPet
+    {
+        public string Name { get; set; }
+        public string Type { get; set; }
+        public string Breed { get; set; }
+    }
 }
