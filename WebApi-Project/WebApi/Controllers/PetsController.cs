@@ -11,7 +11,7 @@ namespace WebApi.Controllers
     {
         public static List<Pet> Pets = new List<Pet>()
         {
-            new Pet(){ Id = 1, Name = "Bailey", Type = "Dog", Breed = "Dachshund"},
+            new Pet() { Id = 1, Name = "Bailey", Type = "Dog", Breed = "Dachshund"},
             new Pet() { Id = 2, Name = "Mila", Type = "Cat", Breed = "Cymric"}
         };
 
@@ -24,9 +24,14 @@ namespace WebApi.Controllers
 
         // GET api/<PetsController>/5
         [HttpGet("{id}")]
-        public Pet Get(int id)
+        [ProducesResponseType(statusCode:200, Type = typeof(Pet))]
+        [ProducesResponseType(statusCode:404)]
+        public IActionResult Get(int id)
         {
-            return Pets.FirstOrDefault(x => x.Id == id);
+            if (!Pets.Exists(x => x.Id == id))
+                return Ok(Pets.FirstOrDefault(x => x.Id == id));
+            return NotFound();
+            
         }
 
         // POST api/<PetsController>
@@ -35,7 +40,7 @@ namespace WebApi.Controllers
         {
             Pet pet = new Pet()
             {
-                Id = Pets.Max(x => x.Id) + 1,
+                Id = Pets.Max(x => x.Id) + 1, 
                 Name = vmPet.Name,
                 Type = vmPet.Type,
                 Breed = vmPet.Breed
